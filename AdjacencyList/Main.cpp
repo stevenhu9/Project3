@@ -6,33 +6,10 @@
 #include <vector>
 #include <map>
 
-using namespace std;
+#include "City.h"
+#include "Graph.h"
 
-class City
-{
-	int id;
-	string name;
-	string country;
-	string population;
-	string timezone;
-	pair<double, double> coordinates;
-public:
-	City(int id, string name, string country, string population, string timezone, pair<double, double> coordinates)
-	{
-		this->id = id;
-		this->name = name;
-		this->country = country;
-		this->population = population;
-		this->timezone = timezone;
-		this->coordinates = coordinates;
-	}
-	int getID() { return id; }
-	string getName() { return name; }
-	string getCountry() { return country; }
-	string getPopulation() { return population; }
-	string getTimezone() { return timezone; }
-    pair<double, double> getCoordinates() { return coordinates; }
-};
+using namespace std;
 
 void getData(string fileName, vector<City>& Cities)
 {
@@ -117,33 +94,143 @@ void getData(string fileName, vector<City>& Cities)
 	}
 }
 
-void sortData(vector<City> Cities, map<string, pair<double, double>>& cities, map<int, vector<City>>& latitude, map<int, vector<City>>& longitude) {
+void sortData(vector<City> Cities, map<string, pair<double, double>>& cities) {
     for(City c : Cities) {
         cities[c.getName()] = c.getCoordinates();
-
-       //insert latitude base on its whole number degree
-       int y = int(c.getCoordinates().first);
-       latitude[y].push_back(c);
-
-       //insert longitude based on its whole number degree
-       int x = int(c.getCoordinates().second);
-       latitude[x].push_back(c);
     }
 }
 
+void calculateInBetween(vector<City>& cities, map<string, pair<double, double>>& setCities, string start, string end, vector<City>& answers, City& src, City& final) {
+    // get starting location
+    // get end location
+    // get number of stops
+
+    // based on coordinates, get all cities within range of the starting location and end location
+
+    bool north = false;
+    bool east = false;
+    bool south = false;
+    bool west = false;
+
+
+    // starting location
+    int startX = setCities[start].second;
+    int startY = setCities[start].first;
+
+    //cout << start << " " << startX << ", " << startY << endl;
+
+    // end location
+    int endX = setCities[end].second;
+    int endY = setCities[end].first;
+
+    //cout << end << " " << endX << ", " << endY << endl;
+
+    if (endX > startX)
+    {
+        east = true;
+    }
+    else
+    {
+        west = true;
+    }
+
+    if (endY > endX)
+    {
+        north = true;
+    }
+
+    else
+    {
+        south = true;
+    }
+
+    double maxy;
+    double maxx;
+    double miny;
+    double minx;
+
+    if (north)
+    {
+        maxy = endY;
+        miny = startY;
+    }
+    else
+    {
+        maxy = startY;
+        miny = endY;
+    }
+
+    if (east)
+    {
+        maxx = endX;
+        minx = startX;
+    }
+    else
+    {
+        maxx = startX;
+        minx = endX;
+    }
+
+    // maxx == x-coordinate of city cannot be greater than maxx
+    // maxy == y-coordinate of city cannot be greater than maxy
+
+    for (int i = 0; i < cities.size();i++)
+    {
+        if ((cities[i].getCoordinates().second <= maxx && cities[i].getCoordinates().second >= minx) && (cities[i].getCoordinates().first <= maxy && cities[i].getCoordinates().first >= miny))
+        {
+            answers.push_back(cities[i]);
+            if((cities[i].getCoordinates().second == maxx || cities[i].getCoordinates().second == minx) && (cities[i].getCoordinates().first == maxy || cities[i].getCoordinates().first == miny)) {
+                if (cities[i].getName() == start)
+                    src = cities[i];
+                else if (cities[i].getName() == end)
+                    final = cities[i];
+            }
+        }
+    }
+
+    /*for (int j = 0; j < answers.size(); j++)
+    {
+        cout << answers[j].getName() << " " << answers[j].getCoordinates().second << ", " << answers[j].getCoordinates().first << endl;
+    }*/
+
+    //cout << answers.size() << endl;
+
+    // generate matrix with each city's distance from the starting location
+    // use breadth first search and the number of stops to generate paths the user can take to get to their location
+    // display possible paths and their distances
+}
 
 int main()
 {
 	vector<City> cities;
     map<string, pair<double, double>> setCities; //easy look up for city being searched
-	map<int, vector<City>> latitude; //sorting city into similar latitude
-    map<int, vector<City>> longitude; //sorting city into similar latitude
 	getData("data.csv", cities);
-	sortData(cities, setCities, latitude, longitude);
+	sortData(cities, setCities);
+
+	//cout << cities[0].getCoordinates().first << " " << cities[0].getCoordinates().second << endl;
+	//cout << setCities.size() << endl;
+	//cout << cities.size() << endl;
+
+	vector<City> answers;
+	City src;
+	City final;
+
+	calculateInBetween(cities, setCities, "Overton", "Oban", answers, src, final);
+
+	//cout << src.getName() << " " << src.getCoordinates().second << " " << src.getCoordinates().first << endl;
+    //cout << final.getName() << " " << final.getCoordinates().second << " " << final.getCoordinates().first << endl;
+
+    Graph adjList(answers);
+
+    cout << answers.size() << " " << adjList.indexes.size() << " " << adjList.graph.size() << endl;
 
 
-	cout << cities[0].getCoordinates().first << " " << cities[0].getCoordinates().second << endl;
-	cout << setCities.size() << endl;
+    vector<string> path = adjList.ShortestPath(src, final, 4);
+
+    for(string s : path) {
+        pair<double, double> coordinates = setCities[s];
+        cout << s << " " << coordinates.second << ", " << coordinates.first << endl;
+    }
 
     return 0;
 }
