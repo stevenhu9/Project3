@@ -1,0 +1,177 @@
+﻿  Main.cpp
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(190,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(378,20): warning C4018: '>': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(458,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(477,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(479,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(506,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(517,20): warning C4018: '>': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(534,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(560,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(847,70): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(847,52): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(857,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(857,68): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(860,81): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(860,69): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(862,88): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(862,76): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(867,83): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(867,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(872,80): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(872,68): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(878,78): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(878,66): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(884,85): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(884,73): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(1098,51): warning C4244: 'argument': conversion from '_Ty2' to 'float', possible loss of data
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(1098,39): warning C4244: 'argument': conversion from '_Ty1' to 'float', possible loss of data
+          with
+          [
+              _Ty1=double
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(1106,26): warning C4244: 'initializing': conversion from '_Ty1' to 'float', possible loss of data
+          with
+          [
+              _Ty1=double
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(1107,26): warning C4244: 'initializing': conversion from '_Ty2' to 'float', possible loss of data
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(1110,26): warning C4244: 'initializing': conversion from '_Ty1' to 'float', possible loss of data
+          with
+          [
+              _Ty1=double
+          ]
+C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Main.cpp(1111,26): warning C4244: 'initializing': conversion from '_Ty2' to 'float', possible loss of data
+          with
+          [
+              _Ty2=double
+          ]
+  SFMLtesting.vcxproj -> C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Debug\SFMLtesting.exe
