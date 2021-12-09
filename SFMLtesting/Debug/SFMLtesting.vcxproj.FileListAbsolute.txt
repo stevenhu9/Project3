@@ -1,2 +1,0 @@
-C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Debug\SFMLtesting.exe
-C:\Users\kknex\OneDrive\Desktop\COP 3530\Project 3\SFMLtesting\Debug\SFMLtesting.pdb
